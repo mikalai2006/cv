@@ -1,6 +1,8 @@
 <template>
   <nav>
-    <ul class="flex space-x-2 items-center">
+    <ul
+      class="flex flex-col items-stretch space-y-2 md:space-y-0 md:space-x-2 md:flex-row md:items-center"
+    >
       <StoryblokComponent
         v-for="item in blok.links"
         :key="item._uid"

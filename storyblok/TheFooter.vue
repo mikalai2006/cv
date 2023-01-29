@@ -13,7 +13,7 @@
           1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042
           23.333 4.867 8 15z
         </LIcon>
-        to <span class="text-a-500 font-bold">JS</span>,
+        to <span class="text-yellow-500 font-bold">JS</span>,
         <span class="text-p-500 font-bold">Vue.js</span> and
         <span class="text-purple-500 font-bold">Tailwind.css</span>
       </div>

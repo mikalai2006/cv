@@ -2,6 +2,7 @@
   <main v-editable="blok">
     <StoryblokComponent
       v-for="item in blok.body"
+      v-editable="item"
       :key="item._uid"
       :blok="item"
     />

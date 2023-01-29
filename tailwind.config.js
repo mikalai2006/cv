@@ -11,24 +11,26 @@ module.exports = {
     "./plugins/**/*.{js,ts}",
     "./nuxt.config.{js,ts}",
     "./app.vue",
+    "./node_modules/vueco/**/*.{js,jsx,ts,tsx,vue}",
   ],
   theme: {
-    colors: {
-      transparent: "transparent",
-      current: "currentColor",
-      black: "#000",
-      white: "#fff",
-      gray: colors.neutral,
-      lime: colors.lime,
-      purple: colors.purple,
-      second: colors.neutral,
-      p: colors.emerald, // primary
-      s: colors.slate, // second
-      su: colors.green, // success
-      d: colors.red, // danger
-      a: colors.orange, // accent
+    extend: {
+      colors: {
+        transparent: "transparent",
+        current: "currentColor",
+        black: "#000",
+        white: "#fff",
+        gray: colors.neutral,
+        lime: colors.lime,
+        purple: colors.purple,
+        second: colors.neutral,
+        p: colors.emerald, // primary
+        s: colors.slate, // second
+        su: colors.green, // success
+        d: colors.red, // danger
+        a: colors.orange, // accent
+      },
     },
-    extend: {},
   },
   plugins: [],
 };

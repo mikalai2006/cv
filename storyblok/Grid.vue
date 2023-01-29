@@ -5,6 +5,7 @@
   >
     <StoryblokComponent
       v-for="item in blok.columns"
+      v-editable="item"
       :key="item._uid"
       :blok="item"
     />
