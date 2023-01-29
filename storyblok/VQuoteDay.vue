@@ -88,14 +88,15 @@ const props = defineProps({
   },
 });
 // quotes
-const quotes = computed(() =>
-  props.blok.quotes.map((x: any) => {
-    return {
-      cite: x.cite,
-      text: x.text,
-      author: x.author,
-    };
-  })
+const quotes = computed(
+  () =>
+    props.blok.quotes?.map((x: any) => {
+      return {
+        cite: x.cite,
+        text: x.text,
+        author: x.author,
+      };
+    }) || []
 );
 
 // [
@@ -131,7 +132,7 @@ const quotes = computed(() =>
 // key current quote
 const key = ref(0);
 // current quote
-const quote = computed(() => quotes.value[key.value]);
+const quote = computed(() => quotes.value[key.value] || {});
 
 // change key of current quote
 const disabled = ref(false);

@@ -4,13 +4,19 @@
 set -e
 
 # build
-npm run build
+npm run generate
 
 # navigate into the build output directory
 cd dist
 
+# fix jekyll
+touch .nojekyll
+
 #copy index.html to 404.html
-cp index.html 404.html
+# cp index.html 404.html
+
+mkdir cv
+cp -avr _nuxt cv/_nuxt
 
 # if you are deploying to a custom domain
 # echo 'www.example.com' > CNAME
