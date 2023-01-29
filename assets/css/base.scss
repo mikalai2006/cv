@@ -1,0 +1,86 @@
+body {
+  @apply text-black dark:text-s-400 bg-white dark:bg-s-900 overflow-y-scroll;
+}
+
+.b-rounded {
+  @apply rounded-md;
+}
+.b-scroll::-webkit-scrollbar {
+  @apply cursor-pointer w-3;
+  /*background-color: rgba(229, 231, 235, var(--bg-opacity));*/
+}
+
+.b-scroll::-webkit-scrollbar-track {
+  @apply bg-second-100 dark:bg-second-800;
+  /*background: red;*/
+}
+.b-scroll::-webkit-scrollbar-thumb {
+  @apply box-border bg-second-400 dark:bg-second-600 rounded-md border-2 border-solid border-transparent bg-clip-content;
+  /*outline: 1px solid slategrey;*/
+}
+
+/* Special styling for WebKit/Blink */
+input[type="range"]::-webkit-slider-thumb {
+  @apply h-6 border w-6 rounded-full bg-s-300 disabled:bg-s-200 hover:bg-p-500 cursor-pointer appearance-none transition-all hover:w-8;
+}
+
+/* All the same stuff for Firefox */
+input[type="range"]::-moz-range-thumb {
+  @apply h-6 border w-6 rounded-full bg-s-300 disabled:bg-s-200 hover:bg-p-500 cursor-pointer appearance-none transition-all hover:w-8;
+}
+
+/* All the same stuff for IE */
+input[type="range"]::-ms-thumb {
+  @apply h-6 border w-6 rounded-full bg-s-300 disabled:bg-s-200 hover:bg-p-500 cursor-pointer appearance-none transition-all hover:w-8;
+}
+
+[ripple] .ripple--container .ripple--body {
+  opacity: 0.1 !important;
+  background-color: rgba(0, 0, 0, 0.1) !important;
+  -webkit-animation: rippler 300ms;
+  animation: rippler 300ms;
+}
+span.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  /* animation: ripple 600ms linear; */
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.slidetotop-enter-active {
+  animation: anim-slide-top 0.5s ease;
+}
+
+.slidetotop-leave-active {
+  position: absolute;
+  animation: anim-slide-top-reverse 0.5s ease;
+}
+
+@keyframes anim-slide-top {
+  from {
+    opacity: 0;
+    transform: translateY(-500px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes anim-slide-top-reverse {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(500px);
+  }
+}
