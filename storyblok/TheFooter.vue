@@ -1,7 +1,12 @@
 <template>
-  <div class="bg-s-100 dark:bg-s-800 text-black dark:text-s-200">
+  <div class="bg-white dark:bg-s-800">
     <div class="max-w-screen-lg mx-auto p-4">
-      Footer
+      <StoryblokComponent
+        v-for="item in footer.bloks"
+        v-editable="item"
+        :key="item._uid"
+        :blok="item"
+      />
 
       <div class="py-4">
         Made with
@@ -20,3 +25,12 @@
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+const storyblokApi = useStoryblokApi();
+const { data } = await storyblokApi.get("cdn/stories/global/footer", {
+  version: "draft",
+});
+
+const footer = data.story.content;
+</script>

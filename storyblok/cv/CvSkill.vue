@@ -1,12 +1,10 @@
 <template>
-  <div>
-    <h3>
-      {{ blok.name }}
-    </h3>
-    <!-- <p>
-      {{ blok.awesome }}
-    </p> -->
-  </div>
+  <span>
+    {{ blok.name }}
+    <span v-if="blok.awesome != ''" class="text-s-500">
+      ({{ blok.awesome }})
+    </span>
+  </span>
 </template>
 
 <script lang="ts" setup>

@@ -12,20 +12,6 @@
       <p class="pt-6">
         {{ blok.description }}
       </p>
-      <div class="py-6 flex">
-        <Nuxt-Link
-          class="text-lg block btn b-rounded btn-second ringed fill"
-          to="/projects"
-        >
-          View projects
-        </Nuxt-Link>
-        <Nuxt-Link
-          class="ml-4 text-lg block btn b-rounded btn-primary ringed fill"
-          to="/cv"
-        >
-          View cv
-        </Nuxt-Link>
-      </div>
     </div>
   </div>
 </template>

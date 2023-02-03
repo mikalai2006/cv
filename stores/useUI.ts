@@ -1,7 +1,6 @@
 import { defineStore } from "pinia";
 
 import { useUniversalCookies } from "~~/plugins/universal-cookie";
-const cookie = useUniversalCookies();
 
 export interface IUIState {
   theme: ITheme;
@@ -32,12 +31,13 @@ export const useUI = defineStore({
       this.theme = Object.assign({}, this.theme, option);
     },
     onToggleDark() {
+      const cookie = useUniversalCookies();
       const currentDark = this.theme.dark;
       const doc = document.documentElement;
 
       if (currentDark) {
         doc.classList.remove("dark");
-        cookie.remove("dark");
+        cookie.set("dark", false);
       } else {
         doc.classList.add("dark");
         cookie.set("dark", true);
