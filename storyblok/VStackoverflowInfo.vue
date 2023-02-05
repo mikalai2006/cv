@@ -14,7 +14,7 @@ const props = defineProps<IProp>();
 
 const dayjs = inject("dayjs");
 
-const user = computed(() => props.blok.user || {});
+const user = computed(() => props.blok.user?.user || {});
 
 // const answers = ref([]);
 // const getAnswer = (userId: string) => {
@@ -32,7 +32,7 @@ const user = computed(() => props.blok.user || {});
 
 <template>
   <section>
-    <h3 class="text-lg font-medium mb-2">
+    <h3 class="mb-2 text-s-500">
       {{ blok.title }}
     </h3>
     <div class="flex items-start gap-4">
@@ -75,7 +75,7 @@ const user = computed(() => props.blok.user || {});
             :href="user.link"
             target="_blank"
             :title="`${user.display_name} (${blok.textlink})`"
-            class="underline flex items-center"
+            class="underline pt-2 text-sm flex items-center text-s-500"
           >
             {{ blok.textlink }}
             <LIcon class="pl-1">
