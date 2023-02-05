@@ -1,7 +1,7 @@
 <template>
   <div class="p-4 md:p-12">
     <div class="max-w-screen-lg mx-auto bg-white dark:bg-s-800 p-4 rounded-md">
-      <div class="text-center flex items-center space-x-4">
+      <div class="text-center flex flex-wrap items-center gap-4">
         <FButton :disabled="disabled" @click="onChangeKeyCurrentQuote">
           Random quote
         </FButton>
@@ -17,7 +17,7 @@
             {{ iPlay }}
           </LIcon>
         </FButton>
-        <div class="relative group">
+        <div class="relative group hidden md:block">
           <div
             class="absolute bg-s-200 rounded-md px-2 text-sm -top-5 hidden group-hover:block"
           >

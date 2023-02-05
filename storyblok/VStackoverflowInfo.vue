@@ -35,8 +35,8 @@ const user = computed(() => props.blok.user?.user || {});
     <h3 class="mb-2 text-s-500">
       {{ blok.title }}
     </h3>
-    <div class="flex items-start gap-4">
-      <div class="w-24 h-24 rounded-md overflow-hidden">
+    <div class="flex items-start gap-2 md:gap-4">
+      <div class="flex-none w-24 h-24 rounded-md overflow-hidden">
         <img
           v-if="user.profile_image"
           :src="user.profile_image"
@@ -45,7 +45,7 @@ const user = computed(() => props.blok.user?.user || {});
         />
         <div v-else class="bg-s-200 dark:bg-s-700 h-full w-full"></div>
       </div>
-      <div v-if="user.display_name" class="flex-auto px-4">
+      <div v-if="user.display_name" class="flex-auto">
         <b>
           {{ user.display_name }}
         </b>
