@@ -1,0 +1,1 @@
+import{a as s,o as t,e as a,j as n,t as o,q as l}from"./entry.16dc278f.js";const c={key:0,class:"text-s-500"},u=s({__name:"CvSkill",props:{blok:{type:Object,default:()=>({})}},setup(e){return(r,m)=>(t(),a("span",null,[n(o(e.blok.name)+" ",1),e.blok.awesome!=""?(t(),a("span",c," ("+o(e.blok.awesome)+") ",1)):l("",!0)]))}});export{u as default};

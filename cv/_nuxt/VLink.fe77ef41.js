@@ -1,0 +1,1 @@
+import{a,o,c as n,l as s,i as c,t as l,y as i}from"./entry.16dc278f.js";const r={class:"whitespace-nowrap"},k=a({__name:"VLink",props:{blok:{type:Object,default:()=>({})}},setup(t){return(_,p)=>{const e=i;return o(),n(e,{class:"",to:`/${t.blok.link.cached_url}`,title:t.blok.title},{default:s(()=>[c("span",r,l(t.blok.title),1)]),_:1},8,["to","title"])}}});export{k as default};
